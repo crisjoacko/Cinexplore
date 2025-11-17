@@ -45,6 +45,7 @@ body{
 
 .nav-bar li{
     list-style: none;
+    position: relative;
 }
 
 .nav-bar li a{
@@ -52,6 +53,45 @@ body{
     color: #fff;
     font-size: 1rem;
     transition: color 0.3s ease;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 0.5rem;
+    z-index: 900;
+    border-radius: 5px;
+}
+
+.nav-bar li:hover .dropdown-content{
+    display: block;
+}
+
+.active-dropdown {
+    display: block !important; 
+}
+
+.tipos-generos{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+
+.tipos-generos li a{
+    padding: 8px 15px;
+    display: block;
+    text-align: left;
+}
+
+.tipos-generos li a:hover{
+    background-color: #9e030a;
+    color: #fff;
 }
 
 .nav-bar li a:hover{

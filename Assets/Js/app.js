@@ -2,6 +2,7 @@
 const popuLink = document.getElementById("populares");
 const estrenosLink = document.getElementById("estrenos");
 const generoLink = document.getElementById("generos");
+const dropdownContent = document.querySelector('.dropdown-content');
 const listaLink = document.getElementById("lista");
 const contactoLink = document.getElementById("contacto");
 
@@ -40,3 +41,18 @@ function setSuccess(element) {
     controlInput.classList.remove('error');
     controlInput.classList.add('success');
 }
+
+
+
+generoLink.addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    dropdownContent.classList.toggle("active-dropdown");
+})
+
+
+//Api key
+const API_KEY = 'e37313cddebf7e2cb372e33b098690e6';
+const API_URL = 'https://api.themoviedb.org/3/movie';
+
+//fetch()
