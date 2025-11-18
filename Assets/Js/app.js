@@ -317,6 +317,7 @@ form.addEventListener("submit", (e)=>{
         isValid = false;
     } else {
         setSuccess(nombre);
+        console.log(nombreValue);
     }
 
     if(emailValue === ''){
@@ -327,6 +328,7 @@ form.addEventListener("submit", (e)=>{
         isValid = false;
     } else {
         setSuccess(email);
+        console.log(emailValue);
     }
 
     if(mensajeValue === ''){
@@ -334,6 +336,7 @@ form.addEventListener("submit", (e)=>{
         isValid = false;
     } else {
         setSuccess(mensaje);
+        console.log(mensajeValue);
     }
 
     if(isValid){
