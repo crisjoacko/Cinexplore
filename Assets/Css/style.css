@@ -90,7 +90,6 @@ body{
 }
 
 .tipos-generos li a:hover{
-    background-color: #9e030a;
     color: #fff;
 }
 
@@ -166,9 +165,15 @@ body{
 
 .carousel-container{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: stretch;
     gap: 3rem;
+    overflow-x: auto;
+
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; 
 }
 
 
@@ -185,6 +190,8 @@ body{
     border: white 2px solid;
     box-shadow: 0.5;
     border-radius: 5px;
+    flex-shrink: 0;
+    width: 300px;
 }
 
 .peli-carousel img{
